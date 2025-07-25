@@ -21,7 +21,7 @@
   "author": {
     "name": "Dmitry Semenov",
     "email": "diiiimaaaa@gmail.com",
-    "web": "http://dimsemenov.com"
+    "web": "https://dimsemenov.com"
   },
   "license": "MIT",
   "bugs": {
@@ -29,7 +29,7 @@
   },
   "main": "dist/jquery.magnific-popup.js",
   "style": "dist/magnific-popup.css",
-  "homepage": "http://dimsemenov.com/plugins/magnific-popup/",
+  "homepage": "https://dimsemenov.com/plugins/magnific-popup/",
   "engines": {
     "node": ">= 0.8.0"
   },

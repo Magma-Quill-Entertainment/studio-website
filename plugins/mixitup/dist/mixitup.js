@@ -11,7 +11,7 @@
  *            https://www.kunkalabs.com/mixitup/licenses/
  *
  *            Non-commercial use permitted under same terms as CC BY-NC 3.0 license.
- *            http://creativecommons.org/licenses/by-nc/3.0/
+ *            https://creativecommons.org/licenses/by-nc/3.0/
  */
 
 (function(window) {
@@ -1885,7 +1885,7 @@
 
         /**
          * A valid CSS3 transition-timing function or shorthand. For a full list of accepted
-         * values, visit <a href="http://easings.net" target="_blank">easings.net</a>.
+         * values, visit <a href="https://easings.net" target="_blank">easings.net</a>.
          *
          * @example <caption>Example 1: Apply "ease-in-out" easing to all animations</caption>
          *
