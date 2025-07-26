@@ -29,7 +29,7 @@ $(document).ready(function(){
          required: "Please put your email address",
       },
       user_message: {
-         required: "Put some messages here?",
+         required: "Please write something!",
          minlength: "Your name must consist of at least 2 characters"
       },
 

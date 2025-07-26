@@ -34,6 +34,19 @@
 </head>
 
 <body id="body">
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    const params = new URLSearchParams(window.location.search);
+    const jobTitle = params.get('job');
+    if (jobTitle) {
+      const subjectInput = document.querySelector('[name="user_subject"]');
+      if (subjectInput) {
+        subjectInput.value = `Application for: ${decodeURIComponent(jobTitle)}`;
+      }
+    }
+  });
+</script>
+
 <!-- Header Start -->
 <header class="navigation">
 	<div class="container">
@@ -50,58 +63,44 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							</button>
-							<a class="navbar-brand" href="index.html">
-                                <img src="images/logo.png" alt="Logo" style="max-width: 40%; height: auto;">
-							</a>
-						</div>
+                            <a class="navbar-brand" href="index.html">
+                                <img src="images/logo.png" alt="MagmaQuill Entertainment Logo" class="logo">
+                            </a>
+                        </div>
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav navbar-right">
 								<li><a href="index.html">Home</a></li>
+								<li><a href="about.html">About Us</a></li>
 								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Portfolio <span class="ion-ios-arrow-down"></span></a>
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Studio<span class="ion-ios-arrow-down"></span></a>
 									<ul class="dropdown-menu">
-										<li><a href="portfolio.html">Portfolio Filter</a></li>
-										<li><a href="portfolio-single.html">Portfolio Single</a></li>
-									</ul>
-								</li>
-								<li><a href="service.html">Service</a></li>
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog <span class="ion-ios-arrow-down"></span></a>
-									<ul class="dropdown-menu">
-										<li><a href="blog-grid.html">Blog Grid</a></li>
-										<li><a href="blog-single.html">Blog Single</a></li>
-										<li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-										<li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-										<li><a href="blog-full-width.html">Blog Full Width</a></li>
-									</ul>
-								</li>
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages <span class="ion-ios-arrow-down"></span></a>
-									<ul class="dropdown-menu">
-										<li><a href="about.html">About Us</a></li>
-										<li><a href="coming-soon.html">Coming Soon</a></li>
-										<li><a href="404.html">404 Page</a></li>
+										<li><a href="jobs.html">Jobs</a></li>
+										<li><a href="portfolio.html">Project Library</a></li>
 										<li><a href="faq.html">FAQ</a></li>
 										<li><a href="pricing.html">Pricing Table</a></li>
 									</ul>
 								</li>
 								<li><a href="contact.html">Contact</a></li>
 							</ul>
-							</div><!-- /.navbar-collapse -->
-							</div><!-- /.container-fluid -->
-						</nav>
-					</div>
-				</div>
-			</div>
-			</header><!-- header close -->
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header><!-- header close -->
+
 <section class="page-title bg-2">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <div class="block">
-          <h1>Drop Us A Note</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, quibusdam.</p>
+        <div class="block" style="
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1rem 2rem;
+  border-radius: 6px;
+">
+            <h1 style="color: black; font-weight: initial">Drop Us A Line</h1>
         </div>
       </div>
     </div>
@@ -119,7 +118,7 @@
                             <input name="user_name" type="text" class="form-control" placeholder="Your Name">
                         </div>
                         <div class="form-group">
-                            <input name="user_email" type="text" class="form-control" placeholder="Email Address">
+                            <input name="user_email" type="text" class="form-control" placeholder="Your Email Address">
                         </div>
                         <div class="form-group">
                             <input name="user_subject" type="text" class="form-control" placeholder="Subject">
@@ -129,63 +128,50 @@
                 <div class="col-md-6 col-sm-12">
                     <div class="block">
                         <div class="form-group-2">
-                            <textarea name="user_message" class="form-control" rows="3" placeholder="Your Message"></textarea>
+                            <textarea name="user_message" class="form-control" rows="3" placeholder="Message"></textarea>
                         </div>
                             <button class="btn btn-default" type="submit">Send Message</button>
                     </div>
                 </div>
-                <div class="error" id="error">Sorry Msg dose not sent</div>
+                <div class="error" id="error">Sorry Msg was not sent</div>
                 <div class="success" id="success">Message Sent</div>
             </form>
         </div>
         <div class=" contact-box row">
             <div class="col-md-6 col-sm-12">
                 <div class="block">
-                    <h2>Stop By For A visit</h2>
                     <ul class="address-block">
                         <li>
-                            <i class="ion-ios-location-outline"></i>North Main Street,Brooklyn Australia
+                            <i class="ion-ios-location-outline"></i>USA
                         </li>
                         <li>
                             <i class="ion-ios-email-outline"></i>Email: contact@mail.com
                         </li>
-                        <li>
-                            <i class="ion-ios-telephone-outline"></i>Phone:+88 01672 506 744
-                        </li>
                     </ul>
                     <ul class="social-icons">
                         <li>
-                            <a href="https://www.themefisher.com"><i class="ion-social-googleplus-outline"></i></a>
+                            <a href="#"><i class="ion-social-twitch-outline"></i></a>
                         </li>
                         <li>
-                            <a href="https://www.themefisher.com"><i class="ion-social-linkedin-outline"></i></a>
+                            <a href="#"><i class="ion-social-octocat"></i></a>
                         </li>
                         <li>
-                            <a href="https://www.themefisher.com"><i class="ion-social-pinterest-outline"></i></a>
+                            <a href="#"><i class="ion-social-linkedin-outline"></i></a>
                         </li>
                         <li>
-                            <a href="https://www.themefisher.com"><i class="ion-social-dribbble-outline"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.themefisher.com"><i class="ion-social-twitter-outline"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.themefisher.com"><i class="ion-social-facebook-outline"></i></a>
+                            <a href="#"><i class="ion-social-instagram-outline"></i></a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="col-md-6 col-sm-12">
                 <div class="block">
-                    <h2>We Also Count In Google Map</h2>
-                    <div class="google-map">
-                        <div id="map"></div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
+    </div>
 </section>
+
 <!-- footer Start -->
 <footer class="footer">
 	<div class="container">
@@ -193,14 +179,13 @@
 			<div class="col-md-12">
 				<div class="footer-manu">
 					<ul>
-						<li><a href="#">About Us</a></li>
-						<li><a href="#">Contact us</a></li>
-						<li><a href="#">How it works</a></li>
-						<li><a href="#">Support</a></li>
-						<li><a href="#">Terms</a></li>
+						<li><a href="index.html#gold-standard">MQE Gold Standard</a></li> <!-- Will be moved to the About page -->
+						<li><a href="jobs.html">Jobs</a></li>
+						<li><a href="contact.html">Contact us</a></li>
+						<li><a href="#">Studio Login</a></li>
 					</ul>
 				</div>
-<p class="copyright-text">Copyright 2025 &copy; MagmaQuill Entertainment. All rights reserved.</p>
+                <p class="copyright-text">Copyright 2025 &copy; MagmaQuill Entertainment. All rights reserved.</p>
 			</div>
 		</div>
 	</div>
