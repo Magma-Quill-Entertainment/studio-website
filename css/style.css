@@ -495,6 +495,11 @@ button:focus-visible {
   position: relative;
 }
 
+/* Reserve room for anchored status labels when present. */
+.card:has(.status) {
+  padding-bottom: 2.6rem;
+}
+
 .card > *:last-child {
   margin-bottom: 0;
 }
@@ -517,7 +522,7 @@ button:focus-visible {
 .card h3 {
   margin-top: 0;
   margin-bottom: 0.4rem;
-  padding-right: 9.25rem;
+  padding-right: 0;
 }
 
 .kicker {
@@ -527,13 +532,51 @@ button:focus-visible {
    font-family: "Oswald", sans-serif;
    font-size: 0.88rem;
    color: var(--accent-strong);
-   padding-right: 9.25rem;
+   padding-right: 0;
  }
 
-.status {
+/* Optional icon slot for cards that need quick visual state in the top-right corner. */
+.card-icon {
   position: absolute;
   top: 0.95rem;
   right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+}
+
+.card-icon img,
+.card-icon svg {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+
+/* Optional icon size adjustments for visual balance across different source files. */
+.card-icon.scale-down {
+  transform: scale(0.8);
+}
+
+.card-icon.scale-up {
+  transform: scale(1.2);
+}
+
+/* Cards with icons keep a little right padding for heading/kicker lines. */
+.card.has-icon h3,
+.card.has-icon h4,
+.card.has-icon .kicker {
+  padding-right: 2rem;
+}
+
+.status {
+  position: absolute;
+  top: auto;
+  right: 1rem;
+  bottom: 0.85rem;
   margin: 0;
   font-size: 0.73rem;
   font-style: italic;
@@ -884,4 +927,3 @@ button:focus-visible {
     grid-template-columns: 1fr;
   }
 }
-
